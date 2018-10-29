@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package phoenix.messages;
+
+message HelloRequest {
+    string WphID = 1;
+}
+
+message HelloResponse {
+    string WphID = 1;
+}
+
+service HelloService {
+    rpc Greet (HelloRequest) returns (HelloResponse);
+}
+
+
+message Coordinate {
+    double Lat = 1;
+    double Lon = 2;
+}
+
+message CoordinateResponse {
+    int64 Time = 1;
+    double Lat = 2;
+    double Lon = 3;
+}
+
+service PositionService {
+    rpc Position (Coordinate) returns (stream CoordinateResponse);
+}
+
+message LoginRequest {
+    string WphId = 1;
+    string AccessToken = 2;
+}

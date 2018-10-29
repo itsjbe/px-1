@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package messages;
+
+message WphLoginRequest {
+    string WphID = 1;
+    string Token = 2;
+}
+
+message WphLoginResponse {
+    string Error = 1;
+    int32 ErrorCode = 2;
+}
+
+message VueMetadataRequest {
+}
+
+message VueMetadataResponse {
+    string someData = 1;
+}
