@@ -47,7 +47,6 @@ vault policy write torii vault/torii-policy.hcl
 ```
 
 ```bash
-
 vault token create \
   -policy="toriiapp" \
   -display-name="toriiapp"

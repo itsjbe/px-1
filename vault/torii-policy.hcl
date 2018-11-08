@@ -1,8 +1,8 @@
-path "secret/torii" {
+path "secret/toriiapp" {
   capabilities = ["read", "list"]
 }
 
-path "mysql/creds/torii" {
+path "mysql/creds/toriiapp" {
   capabilities = ["read", "list"]
 }
 

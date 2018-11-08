@@ -1,14 +1,9 @@
 package handlers
 
 import (
-	"encoding/json"
 	"fmt"
-	"km/phoenix/src/phoenix/torii/user"
 	"net/http"
 	"time"
-
-	"github.com/dgrijalva/jwt-go"
-	"golang.org/x/crypto/bcrypt"
 )
 
 func LoggingHandler(h http.Handler) http.Handler {
